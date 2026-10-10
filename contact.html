@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Car World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page">
+
+    <nav>
+        <h1>CAR WORLD</h1>
+        <a href="index.html">HOME</a>
+        <a href="cars.html">CARS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <h2>CONTACT US</h2>
+
+    <div class="car-card">
+        <h3>Get in Touch</h3>
+
+        <p>Have a question about cars? Send us a message!</p>
+
+        <form id="contactForm">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" required><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" rows="5" required></textarea><br><br>
+
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+
+        <p id="formResponse"></p>
+    </div>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.getElementById("formResponse").textContent =
+                "Thank you! Your message has been received.";
+            document.getElementById("contactForm").reset();
+        }
+
+        document.getElementById("contactForm")
+            .addEventListener("submit", showMessage);
+    </script>
+<footer>
+    <p>Website Created By: Robin Singh</p>
+</footer>
+</body>
+</html>
